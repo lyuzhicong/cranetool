@@ -1,4 +1,10 @@
 import mul from './multiply';
+/**
+ * 
+ * @param {Number} a 
+ * @param {Number} b 
+ * 两个数字相加
+ */
 const add = (a, b)=> {
     if (typeof (a) == 'number') a += ''
     if (typeof (b) == 'number') b += ''

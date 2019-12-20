@@ -50,7 +50,7 @@
       "no-useless-escape": 2,
       "require-yield": 2,
       "use-isnan": 2,
-      "valid-typeof": 2
+      "valid-typeof": 0
   },
   "env": {
       "node": true

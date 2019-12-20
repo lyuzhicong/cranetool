@@ -1,3 +1,9 @@
+/**
+ * 
+ * @param {Number} a 
+ * @param {Number} b 
+ * 两个数字的相乘
+ */
 const mul =  (a, b)=>{
     if (typeof (a) == 'number') a += '';
     if (typeof (b) == 'number') b += '';
