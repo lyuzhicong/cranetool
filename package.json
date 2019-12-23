@@ -20,7 +20,8 @@
   "scripts": {
     "test": "jest",
     "build": "rollup --config rollup.config/prod.js --environment NODE_ENV:production",
-    "dev": "rollup --config rollup.config/dev.js --environment NODE_ENV:development"
+    "dev": "rollup --config rollup.config/dev.js --environment NODE_ENV:development",
+    "test:report": "jest --coverage && open ./coverage/lcov-report/index.html"
   },
   "repository": {
     "type": "git",
