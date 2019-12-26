@@ -1,4 +1,4 @@
-import isNullOrEmpty from './../tools/isNullOrEmpty';
+import isNullOrEmpty from '../tools/isNullOrEmpty';
 
 test('数据是否为空', () => {
   const arr1 = [null,undefined,'','null','undefined'];

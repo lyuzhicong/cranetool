@@ -1,9 +1,8 @@
 {
     "presets": [
       [
-        "@babel/preset-env", {
-          //需要让babel不转化模块相关的语法，不然rollup在使用过程中会报错
-          "modules":false,
+        "@babel/preset-env", 
+        {
           "targets": {
             "node": "current"
           }

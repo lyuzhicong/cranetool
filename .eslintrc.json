@@ -38,7 +38,7 @@
       "no-redeclare": 2,
       "no-regex-spaces": 2,
       "no-self-assign": 2,
-      "no-sparse-arrays": 2,
+      "no-sparse-arrays": 0,
       "no-this-before-super": 2,
       "no-undef": 0,
       "no-unexpected-multiline": 2,
@@ -47,7 +47,7 @@
       "no-unsafe-negation": 2,
       "no-unused-labels": 2,
       "no-unused-vars": 0,
-      "no-useless-escape": 2,
+      "no-useless-escape": 0,
       "require-yield": 2,
       "use-isnan": 2,
       "valid-typeof": 0

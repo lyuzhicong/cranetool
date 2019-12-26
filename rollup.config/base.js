@@ -4,6 +4,8 @@ const babel = require("rollup-plugin-babel");
 const resolve = require("rollup-plugin-node-resolve")
 //解析commonjs需要引入一个rollup插件——rollup-plugin-commonjs
 const commonjs = require("rollup-plugin-commonjs");
+//别名
+const alias = require("rollup-plugin-alias");
 
 
 module.exports = {
@@ -21,6 +23,13 @@ module.exports = {
             externalHelpers: true,
             runtimeHelpers: true,
         }),
+        alias({
+            resolve: ['.js'],
+            entries:[
+                {find:'t',replacement:'./tools'},
+                {find:'main',replacement:'./../main'}
+            ]
+        })
     ],
     // 输出配置
     output: {
@@ -32,7 +41,7 @@ module.exports = {
         4. iife -- 一个自动执行的功能，适合作为 <script>标签这样的。
         5. umd -- 通用模块定义，以amd, cjs, 和 iife 为一体。
          */
-        format: "cjs",
+        format: "umd",
         name: "tools"
     }
 }

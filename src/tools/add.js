@@ -1,11 +1,8 @@
-import mul from './multiply';
+import mul from './multiplication';
 /**
- * 
- * @param {Number} a 
- * @param {Number} b 
- * 两个数字相加
+ * 加法
  */
-const add = (a, b)=> {
+export default (a, b)=> {
     if (typeof (a) == 'number') a += ''
     if (typeof (b) == 'number') b += ''
     let c ,d, e;
@@ -21,5 +18,3 @@ const add = (a, b)=> {
     }
     return e = Math.pow(10, Math.max(c, d)), (mul(a, e) + mul(b, e)) / e;
   }
-
-  export default add;
