@@ -124,7 +124,9 @@ module.exports = {
   testEnvironment: "jest-environment-jsdom-global",
 
   // Options that will be passed to the testEnvironment
-  // testEnvironmentOptions: {},
+  testEnvironmentOptions: {
+    userAgent: "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.4(0x17000428) NetType/4G Language/zh_CN",
+  },
 
   // Adds a location field to test results
   // testLocationInResults: false,
