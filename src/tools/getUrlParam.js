@@ -12,7 +12,6 @@ export default (name, searchUrlOnly = true)=>{
     if (!searchUrlOnly && values) {
         return values;
     }
-  
     values = decodeURIComponent((location.search.match(RegExp("[?|&|/]" + name + '=([^/\&|?&]+)')) || [, null])[1]);
     if (isNullOrEmpty(values)) {
       values = decodeURIComponent((location.hash.match(RegExp("[?|&|/]" + name + '=([^\&|?&]+)')) || [, null])[1]);
