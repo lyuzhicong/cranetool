@@ -1,3 +1,4 @@
+import math from './operateMath';
 /**
  * 乘法
  */
@@ -17,5 +18,5 @@ export default (a, b)=>{
     } catch (f) { 
       c = 0;
     } 
-    return Number(d.replace(".", "")) * Number(e.replace(".", "")) / Math.pow(10, c);
+    return Number(d.replace(".", "")) * Number(e.replace(".", "")) / math.getPow(10, c);
 }

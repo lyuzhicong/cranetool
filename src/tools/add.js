@@ -1,4 +1,5 @@
 import mul from './multiplication';
+import math from './operateMath';
 /**
  * 加法
  */
@@ -16,5 +17,5 @@ export default (a, b)=> {
     } catch (f) {
       d = 0;
     }
-    return e = Math.pow(10, Math.max(c, d)), (mul(a, e) + mul(b, e)) / e;
+    return e = math.getPow(10, math.getMax(c, d)), (mul(a, e) + mul(b, e)) / e;
   }

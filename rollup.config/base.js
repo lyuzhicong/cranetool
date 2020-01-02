@@ -20,7 +20,7 @@ module.exports = {
         babel({
             exclude: "node_modules/**",
             plugins: ["@babel/external-helpers"],
-            externalHelpers: true,
+            // externalHelpers: true,
             runtimeHelpers: true,
         }),
         alias({

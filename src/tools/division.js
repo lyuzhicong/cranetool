@@ -1,4 +1,5 @@
 import mul from './multiplication';
+import math from './operateMath';
 /**
  * 除法
  */
@@ -17,5 +18,5 @@ export default (a, b)=>{
     } catch (g) { 
         f = 0;
     }
-    return c = Number(a.toString().replace(".", "")), d = Number(b.toString().replace(".", "")), mul(c / d, Math.pow(10, f - e));
+    return c = Number(a.toString().replace(".", "")), d = Number(b.toString().replace(".", "")), mul(c / d, math.getPow(10, f - e));
 };
