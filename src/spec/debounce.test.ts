@@ -1,13 +1,8 @@
-import debounce from '../tools-js/debounce';
+import debounce from '../tools-ts/debounce';
 //模拟定时器函数
 jest.useFakeTimers();
 
 describe('函数防抖',()=>{
-  
-  test('回调函数为空',()=>{
-    const result = debounce();
-    expect(result).toBeFalsy();
-  })
 
   test('函数防抖',()=>{
     //回调函数

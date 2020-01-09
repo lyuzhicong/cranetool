@@ -1,16 +1,16 @@
-import isNullOrEmpty from 't/isNullOrEmpty';
-import add from 't/add';
-import sub from 't/subtraction';
-import mul from 't/multiplication';
-import div from 't/division';
-import getUrlParam from 't/getUrlParam';
-import isAndriodOrIsIos from 't/isAndriodOrIsIos';
-import operateCookie from 't/operateCookie';
-import createUuid from 't/createUuid';
-import trim from 't/trim';
-import debounce from 't/debounce';
-import operateMath from 't/operateMath';
-import base64Encode from 't/base64Encode';
+import isNullOrEmpty from 'js/isNullOrEmpty';
+import add from 'js/add';
+import sub from 'js/subtraction';
+import mul from 'js/multiplication';
+import div from 'js/division';
+import getUrlParam from 'js/getUrlParam';
+import isAndriodOrIsIos from 'js/isAndriodOrIsIos';
+import operateCookie from 'js/operateCookie';
+import createUuid from 'js/createUuid';
+import trim from 'js/trim';
+import debounce from 'js/debounce';
+import operateMath from 'js/operateMath';
+import base64Encode from 'js/base64Encode';
 export {
     isNullOrEmpty, //数据是否为空
     add, //加

@@ -1,5 +1,5 @@
 const rollup = require("rollup");
-const base = require("./base");
+const base = require(`./base-${process.env.NODE_ENV}`);
 const {eslint} = require("rollup-plugin-eslint");
 
 base.plugins.push(

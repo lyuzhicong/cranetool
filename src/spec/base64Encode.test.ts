@@ -1,8 +1,8 @@
-import base64Encode from '../tools-js/base64Encode';
+import base64Encode from '../tools-ts/base64Encode';
 
 test('base64Encode转换',()=>{
   const _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-  const _utf8_decode = (utftext)=>{
+  const _utf8_decode = (utftext:string)=>{
     let string = "";
     let i = 0;
     let c = 0;
@@ -26,7 +26,7 @@ test('base64Encode转换',()=>{
     }
     return string;
   }
-  const decoding = (input) =>{
+  const decoding = (input:string) =>{
       let output = "";
       let chr1, chr2, chr3;
       let enc1, enc2, enc3, enc4;
@@ -54,16 +54,14 @@ test('base64Encode转换',()=>{
 
 
 
-  let b1 = base64Encode();
-  expect(b1).toBeFalsy();
   let b2 = base64Encode('');
   expect(b2).toBeFalsy();
-  let b3 = base64Encode('undefined');
+  let b3:any = base64Encode('undefined');
   expect(decoding(b3)).toBe('undefined');
-  let b4 = base64Encode('1');
+  let b4:any = base64Encode('1');
   expect(decoding(b4)).toBe('1');
-  let b5 = base64Encode('ñ');
+  let b5:any= base64Encode('ñ');
   expect(decoding(b5)).toBe('ñ');
-  let b6 = base64Encode('中国');
+  let b6:any = base64Encode('中国');
   expect(decoding(b6)).toBe('中国');
 })

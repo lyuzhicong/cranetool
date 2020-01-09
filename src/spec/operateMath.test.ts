@@ -1,5 +1,5 @@
 
-import operateMath from '../tools-js/operateMath';
+import operateMath from '../tools-ts/operateMath';
 const {
     getRound,
     getRandom,

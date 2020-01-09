@@ -1,4 +1,4 @@
-import trim from '../tools-js/trim';
+import trim from '../tools-ts/trim';
 describe('字符串去空格',()=>{
     test('去首尾空格',()=>{
         const {trimHeadEnd} = trim;

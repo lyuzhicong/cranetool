@@ -7,14 +7,16 @@ const commonjs = require("rollup-plugin-commonjs");
 //别名
 const alias = require("rollup-plugin-alias");
 
+const typescript = require('rollup-plugin-typescript2');
+
 
 module.exports = {
     // 打包入口
-    input: "src/main.js",
+    input: "src/main.ts",
     // 插件
     plugins: [
         resolve({
-            extensions: [".js"]
+            extensions: [".ts"]
         }),
         commonjs(),
         babel({
@@ -23,17 +25,17 @@ module.exports = {
             // externalHelpers: true,
             runtimeHelpers: true,
         }),
+        typescript(),
         alias({
-            resolve: ['.js'],
+            resolve: ['.ts'],
             entries:[
-                {find:'t',replacement:'./tools'},
-                {find:'main',replacement:'./../main'}
+                {find:'ts',replacement:'./tools-ts'},
             ]
         })
     ],
     // 输出配置
     output: {
-        file: "build/tools.js",
+        file: "build/tools.ts.js",
         /**
         1. amd -- 异步模块定义，用于像RequestJS这样的模块加载器。
         2. cjs -- CommonJS, 适用于Node或Browserify/webpack
@@ -42,6 +44,6 @@ module.exports = {
         5. umd -- 通用模块定义，以amd, cjs, 和 iife 为一体。
          */
         format: "umd",
-        name: "tools"
+        name: "tools.ts"
     }
 }

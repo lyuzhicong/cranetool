@@ -1,4 +1,4 @@
-import operateCookie from '../tools-js/operateCookie';
+import operateCookie from '../tools-ts/operateCookie';
 describe('cookie的操作',()=>{
     test('cookie存储-ip',()=>{
         let {setCookie,getCookie} = operateCookie;
@@ -20,10 +20,8 @@ describe('cookie的操作',()=>{
     })
     test('获取cookie',()=>{
         let {getCookie} = operateCookie;
-        const val1 = getCookie();
         const val2 = getCookie('key');
         const val3 = getCookie('name');
-        expect(val1).toBeNull();
         expect(val2).toBeNull();
         expect(val3).toBe('zhangsan');
     })

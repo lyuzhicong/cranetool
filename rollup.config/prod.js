@@ -1,7 +1,7 @@
 const rollup = require('rollup');
 //压缩代码 代替rollup-plugin-uglify
 const {terser} = require('rollup-plugin-terser');
-const base = require('./base');
+const base = require(`./base-${process.env.NODE_ENV}`);
 const version = require('../package.json').version;
 
 // 打压缩包
@@ -19,5 +19,5 @@ const footer =
 
 base.output.banner = banner;
 base.output.footer = footer;
-base.output.file = 'build/tools.min.js';
+base.output.file = `build/tools-${process.env.NODE_ENV}.min.js`;
 module.exports = base;

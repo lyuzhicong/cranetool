@@ -1,4 +1,4 @@
-import createUuid from '../tools-js/createUuid';
+import createUuid from '../tools-ts/createUuid';
 test('创建一个16位的随机数为uuid',()=>{
   let uuid = createUuid();
   expect(uuid.length).toBe(32);
